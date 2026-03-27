@@ -1,4 +1,4 @@
-# BeatTreat — Backend API
+# BeatTreat - Backend API
 
 Backend REST API para la aplicación **BeatTreat**, una plataforma de reseñas musicales. Desarrollado con Node.js, Express y Sequelize sobre PostgreSQL.
 
@@ -6,11 +6,11 @@ Backend REST API para la aplicación **BeatTreat**, una plataforma de reseñas m
 
 ## Tecnologías utilizadas
 
-- **Node.js** — entorno de ejecución
-- **Express** — framework web
-- **Sequelize** — ORM para base de datos relacional
-- **PostgreSQL** — base de datos
-- **Postman** — pruebas de endpoints
+- **Node.js** - entorno de ejecución
+- **Express** - framework web
+- **Sequelize** - ORM para base de datos relacional
+- **PostgreSQL** - base de datos
+- **Postman** - pruebas de endpoints
 
 ---
 
@@ -47,9 +47,9 @@ express/
 
 El backend maneja **3 entidades** relacionadas entre sí:
 
-- **User** — usuario de la plataforma
-- **Album** — álbum musical (artículo a reseñar)
-- **Review** — reseña escrita por un usuario sobre un álbum
+- **User** - usuario de la plataforma
+- **Album** - álbum musical (artículo a reseñar)
+- **Review** - reseña escrita por un usuario sobre un álbum
 
 ```
 User ──< Review >── Album
