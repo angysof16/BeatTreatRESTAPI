@@ -7,13 +7,13 @@ import {
 
 const router = Router();
 
-// POST /reviews  →  crear reseña (body: userId, albumId, rating, content)
+// POST /reviews
 router.post("/reviews", createReview);
 
-// PUT /reviews/:id  →  modificar reseña
+// PUT /reviews/:id
 router.put("/reviews/:id", updateReview);
 
-// DELETE /reviews/:id  →  eliminar reseña
+// DELETE /reviews/:id
 router.delete("/reviews/:id", deleteReview);
 
 export default router;

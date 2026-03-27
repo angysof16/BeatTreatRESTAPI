@@ -4,13 +4,13 @@ import { getReviewsByAlbum } from "../controller/reviews.controller.js";
 
 const router = Router();
 
-// GET /albums  →  todos los álbumes
+// GET /albums
 router.get("/albums", getAllAlbums);
 
-// GET /albums/:id  →  detalle de álbum por id
+// GET /albums/:id
 router.get("/albums/:id", getAlbumById);
 
-// GET /albums/:albumId/reviews  →  reseñas de un álbum
+// GET /albums/:albumId/reviews
 router.get("/albums/:albumId/reviews", getReviewsByAlbum);
 
 export default router;

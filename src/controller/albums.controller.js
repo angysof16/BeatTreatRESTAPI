@@ -1,6 +1,6 @@
 import { Album } from "../models/Album.js";
 
-// GET /albums  →  traer todos los álbumes
+// GET /albums
 export const getAllAlbums = async (req, res) => {
     try {
         const albums = await Album.findAll();
@@ -10,7 +10,7 @@ export const getAllAlbums = async (req, res) => {
     }
 };
 
-// GET /albums/:id  →  detalle de un álbum por id
+// GET /albums/:id
 export const getAlbumById = async (req, res) => {
     try {
         const { id } = req.params;
