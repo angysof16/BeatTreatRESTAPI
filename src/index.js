@@ -4,7 +4,6 @@ import { setupRelations } from "./models/relations.js";
 import { loadInitialUsers } from "./database/initUsers.js";
 import { loadInitialAlbums } from "./database/initAlbums.js";
 
-// Importamos los modelos para que Sequelize los registre antes del sync
 import "./models/User.js";
 import "./models/Album.js";
 import "./models/Review.js";
@@ -14,13 +13,11 @@ async function init() {
         await sequelize.authenticate();
         console.log("Connection established successfully.");
 
-        // force: true recrea las tablas cada vez — útil en desarrollo
-        await sequelize.sync({ force: true });
-
-        // Relaciones entre modelos
+        // Las relaciones ANTES del sync
         setupRelations();
 
-        // Datos iniciales
+        await sequelize.sync({ force: true });
+
         await loadInitialUsers();
         await loadInitialAlbums();
 
