@@ -1,21 +1,13 @@
 import { Router } from "express";
-import {
-  getAllTweets,
-  createTweet,
-  updateTweet,
-  deleteTweet,
-  getTweetById,
-  getTweetReplies
-} from "../controller/tweets.controller.js";
+import { getUserById } from "../controller/users.controller.js";
+import { getReviewsByUser } from "../controller/reviews.controller.js";
 
 const router = Router();
 
-router.get("/tweets", getAllTweets);
-router.post("/tweets", createTweet);
-router.put("/tweets/:id", updateTweet);
-router.delete("/tweets/:id", deleteTweet);
+// GET /users/:id
+router.get("/users/:id", getUserById);
 
-router.get("/tweets/:id", getTweetById);
-router.get("/tweets/:id/replies", getTweetReplies);
+// GET /users/:userId/reviews
+router.get("/users/:userId/reviews", getReviewsByUser);
 
 export default router;
