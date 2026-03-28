@@ -26,20 +26,20 @@ const initialAlbums = [
         description: "Un viaje por 13 noches de insomnio donde Taylor explora sus miedos más íntimos.",
     },
     {
-        title: "Renaissance",
-        artist: "Beyoncé",
-        genre: "Dance / House / R&B",
-        releaseYear: 2022,
-        coverImage: null,
-        description: "Tributo a la música dance y house de la comunidad LGBTQ+.",
-    },
-    {
         title: "News of the World",
         artist: "Queen",
         genre: "Rock / Arena Rock",
         releaseYear: 1977,
         coverImage: null,
         description: "Hogar de los himnos deportivos definitivos: We Will Rock You y We Are the Champions.",
+    },
+    {
+        title: "Renaissance",
+        artist: "Beyoncé",
+        genre: "Dance / House / R&B",
+        releaseYear: 2022,
+        coverImage: null,
+        description: "Tributo a la música dance y house de la comunidad LGBTQ+.",
     },
 ];
 

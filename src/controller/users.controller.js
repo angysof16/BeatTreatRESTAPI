@@ -1,6 +1,6 @@
 import { User } from "../models/User.js";
 
-// GET /users/:id  →  buscar un usuario por id
+// GET /users/:id
 export const getUserById = async (req, res) => {
     try {
         const { id } = req.params;

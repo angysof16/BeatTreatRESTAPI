@@ -2,7 +2,7 @@ import { Review } from "../models/Review.js";
 import { User } from "../models/User.js";
 import { Album } from "../models/Album.js";
 
-// POST /reviews  →  crear reseña asociada a usuario y álbum
+// POST /reviews
 export const createReview = async (req, res) => {
     try {
         const { userId, albumId, rating, content } = req.body;
@@ -21,7 +21,7 @@ export const createReview = async (req, res) => {
     }
 };
 
-// GET /albums/:albumId/reviews  →  todas las reseñas de un álbum
+// GET /albums/:albumId/reviews
 export const getReviewsByAlbum = async (req, res) => {
     try {
         const { albumId } = req.params;
@@ -42,7 +42,7 @@ export const getReviewsByAlbum = async (req, res) => {
     }
 };
 
-// GET /users/:userId/reviews  →  todas las reseñas de un usuario
+// GET /users/:userId/reviews
 export const getReviewsByUser = async (req, res) => {
     try {
         const { userId } = req.params;
@@ -63,7 +63,7 @@ export const getReviewsByUser = async (req, res) => {
     }
 };
 
-// DELETE /reviews/:id  →  eliminar reseña por id
+// DELETE /reviews/:id
 export const deleteReview = async (req, res) => {
     try {
         const { id } = req.params;
@@ -79,7 +79,7 @@ export const deleteReview = async (req, res) => {
     }
 };
 
-// PUT /reviews/:id  →  modificar reseña por id
+// PUT /reviews/:id
 export const updateReview = async (req, res) => {
     try {
         const { id } = req.params;
