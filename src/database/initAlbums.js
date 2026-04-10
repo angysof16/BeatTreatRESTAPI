@@ -6,7 +6,7 @@ const initialAlbums = [
         artist: "Queen",
         genre: "Rock Clásico",
         releaseYear: 1975,
-        coverImage: null,
+        coverImage: "https://upload.wikimedia.org/wikipedia/en/4/4d/Queen_A_Night_At_The_Opera.png",
         description: "Considerado uno de los mejores álbumes de la historia. Contiene Bohemian Rhapsody.",
     },
     {
@@ -14,7 +14,7 @@ const initialAlbums = [
         artist: "Bad Bunny",
         genre: "Reggaetón / Latin Pop",
         releaseYear: 2022,
-        coverImage: null,
+        coverImage: "https://upload.wikimedia.org/wikipedia/en/6/60/Bad_Bunny_-_Un_Verano_Sin_Ti.png",
         description: "El álbum más escuchado del año. Obra maestra que celebra la cultura puertorriqueña.",
     },
     {

@@ -3,6 +3,7 @@ import { sequelize } from "./database/database.js";
 import { setupRelations } from "./models/relations.js";
 import { loadInitialUsers } from "./database/initUsers.js";
 import { loadInitialAlbums } from "./database/initAlbums.js";
+import { loadInitialReviews } from "./database/initReviews.js";
 
 import "./models/User.js";
 import "./models/Album.js";
@@ -20,6 +21,7 @@ async function init() {
 
         await loadInitialUsers();
         await loadInitialAlbums();
+        await loadInitialReviews();   // ← nuevo: carga reseñas de prueba
 
         app.listen(3000, () => {
             console.log("Server running on port 3000");

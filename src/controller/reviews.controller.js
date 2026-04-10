@@ -14,7 +14,17 @@ export const createReview = async (req, res) => {
         if (!album) return res.status(404).json({ error: "Álbum no encontrado" });
 
         const review = await Review.create({ userId, albumId, rating, content });
-        return res.status(201).json(review);
+
+        // Re-fetch con el join de user para que el DTO de Android no falle
+        const reviewConUser = await Review.findByPk(review.id, {
+            include: {
+                model: User,
+                as: "user",
+                attributes: ["id", "username", "name", "email"],
+            },
+        });
+
+        return res.status(201).json(reviewConUser);
 
     } catch (error) {
         return res.status(500).json({ error: error.message });
@@ -31,7 +41,7 @@ export const getReviewsByAlbum = async (req, res) => {
             include: {
                 model: User,
                 as: "user",
-                attributes: ["id", "username", "name", "profileImage"],
+                attributes: ["id", "username", "name", "email"],
             },
         });
 
@@ -88,7 +98,17 @@ export const updateReview = async (req, res) => {
         if (!review) return res.status(404).json({ error: "Reseña no encontrada" });
 
         await review.update(req.body);
-        return res.json(review);
+
+        // Re-fetch con join para respuesta consistente
+        const reviewConUser = await Review.findByPk(review.id, {
+            include: {
+                model: User,
+                as: "user",
+                attributes: ["id", "username", "name", "email"],
+            },
+        });
+
+        return res.json(reviewConUser);
 
     } catch (error) {
         return res.status(500).json({ error: error.message });
