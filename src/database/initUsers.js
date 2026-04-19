@@ -7,7 +7,7 @@ const initialUsers = [
         password: "SecurePass123!",
         name: "Alex Morrison",
         bio: "Music lover | Rock enthusiast | Album collector",
-        profileImage: null,
+        profileImage: "https://cdn.phototourl.com/free/2026-04-19-7fb15066-9d76-4cc3-8695-9ec3302947f6.jpg",
     },
     {
         username: "maria_beats",
