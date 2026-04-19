@@ -15,7 +15,7 @@ const initialUsers = [
         password: "SecurePass123!",
         name: "María García",
         bio: "Reggaeton fan | Bad Bunny forever",
-        profileImage: null,
+        profileImage: "https://cdn.phototourl.com/free/2026-04-16-45a5ba1b-ce39-4e85-a6b8-36010bd95f71.png",
     },
     {
         username: "carlos_rz",
